@@ -1,0 +1,8 @@
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+CREATE TABLE IF NOT EXISTS book (
+  id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
+  title VARCHAR NOT NULL,
+  author VARCHAR NOT NULL,
+  year SMALLINT NOT NULL
+);
